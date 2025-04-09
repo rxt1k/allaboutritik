@@ -1,69 +1,174 @@
-/* spiderman.css */
+:root {
+    --spider-red: #d62d20;
+    --spider-blue: #0d3b66;
+    --spider-dark: #1a1a1a;
+    --spider-light: #f8f9fa;
+    --spider-accent: #ff6b6b;
+}
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #0d0d0d, #1a1a1a);
-    color: #e3e3e3;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+    background-color: var(--spider-dark);
+    color: var(--spider-light);
+    line-height: 1.8;
 }
 
 header {
-    background-color: #b90000;
-    padding: 30px 0;
+    background: linear-gradient(135deg, var(--spider-dark), var(--spider-blue));
+    padding: 4rem 0;
     text-align: center;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--spider-red);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 5px black;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+header h2 {
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    margin-top: 0.5rem;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .intro {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: rgba(25, 25, 25, 0.95);
-    border-left: 5px solid #b90000;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
-    border-radius: 10px;
-    line-height: 1.8;
-    font-size: 1.1rem;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 2.5rem;
+    margin: 3rem auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-top: 3px solid var(--spider-red);
+    position: relative;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--spider-red), transparent);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.email {
+    background: linear-gradient(45deg, #D44638, #B23121);
+}
+
+.contact {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--spider-red);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c8231a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 45, 32, 0.4);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: #ccc;
-    font-size: 0.9rem;
-    border-top: 1px solid #b90000;
+    padding: 2rem 0;
+    background-color: rgba(15, 15, 15, 0.9);
+    border-top: 1px solid rgba(214, 45, 32, 0.3);
 }
 
-/* Spider-Man Vibes */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/hexellence.png');
-    opacity: 0.05;
-    z-index: -1;
-}
-
-.intro::before {
-    content: "🕸️";
-    font-size: 2rem;
+/* Web-like elements */
+.web-line {
     position: absolute;
-    margin-left: -2.5rem;
-    color: #b90000;
-    animation: swing 2s infinite ease-in-out;
+    background: rgba(255,255,255,0.1);
 }
 
-@keyframes swing {
-    0% { transform: rotate(10deg); }
-    50% { transform: rotate(-10deg); }
-    100% { transform: rotate(10deg); }
+.web-line.vertical {
+    width: 1px;
+    height: 100%;
+    left: 20%;
+}
+
+.web-line.horizontal {
+    height: 1px;
+    width: 100%;
+    top: 30%;
+}
+
+/* Animation for subtle web effect */
+@keyframes web-pulse {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0.1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .intro {
+        padding: 1.5rem;
+    }
 }

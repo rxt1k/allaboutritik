@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik | Digital Creator</title>
-    <link rel="stylesheet" href="spiderman.css">
+    <title>Ritik | Full-Stack Developer & Digital Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>I'm Ritik - A Versatile Digital Creator</h1>
+        <div class="container">
+            <h1>I'm Ritik</h1>
+            <h2>A Versatile Digital Creator</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/tvssed.ritik/" target="_blank" class="social-btn instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:editzritik42@gmail.com" class="social-btn email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main class="container">
         <section class="intro">
             <p>I'm a passionate full-stack developer and digital creator with expertise in multiple domains including web development, video editing, photo editing, and database management. My journey in technology has been driven by curiosity and a desire to create impactful digital experiences.</p>
 
@@ -19,10 +31,22 @@
 
             <p>My approach combines technical precision with creative flair, ensuring that every project I undertake is not only functional but also visually compelling and user-friendly.</p>
         </section>
+
+        <section class="contact">
+            <h3>Get In Touch</h3>
+            <p>Based in <strong>India</strong>, I'm available for freelance projects and collaborations.</p>
+            <a href="mailto:editzritik42@gmail.com" class="btn">Contact Me</a>
+        </section>
     </main>
 
     <footer>
-        <p>© 2025 Ritik | All Rights Reserved</p>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Ritik | All Rights Reserved</p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

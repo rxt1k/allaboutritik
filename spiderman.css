@@ -1,35 +1,65 @@
+/* 🎨 Variables */
 :root {
     --spider-red: #d62d20;
     --spider-blue: #0d3b66;
     --spider-dark: #1a1a1a;
     --spider-light: #f8f9fa;
     --spider-accent: #ff6b6b;
-}
-
-body {
+  }
+  
+  /* 🧱 Base Styles */
+  body {
     margin: 0;
     font-family: 'Montserrat', 'Segoe UI', sans-serif;
     background-color: var(--spider-dark);
     color: var(--spider-light);
     line-height: 1.8;
-}
-
-.container {
+  }
+  
+  .container {
     width: 85%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-header {
+  }
+  
+  /* 🕸️ Spider-Man Image Swing */
+  .spidey-swing {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    animation: swingAcross 4s ease-in-out infinite alternate;
+    transform-origin: top center;
+  }
+  
+  .spidey-swing img {
+    height: 100px;
+    width: auto;
+    animation: bounce 1.2s infinite alternate ease-in-out;
+  }
+  
+  @keyframes swingAcross {
+    0% { transform: rotate(15deg) translateX(0); }
+    50% { transform: rotate(-15deg) translateX(10px); }
+    100% { transform: rotate(15deg) translateX(0); }
+  }
+  
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(8px); }
+  }
+  
+  /* 🧢 Header */
+  header {
     background: linear-gradient(135deg, var(--spider-dark), var(--spider-blue));
     padding: 4rem 0;
     text-align: center;
     position: relative;
     overflow: hidden;
-}
-
-header::after {
+  }
+  
+  header::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -37,32 +67,33 @@ header::after {
     right: 0;
     height: 4px;
     background: var(--spider-red);
-}
-
-header h1 {
+  }
+  
+  header h1 {
     margin: 0;
     font-size: 2.8rem;
     font-weight: 700;
     color: white;
     position: relative;
     z-index: 1;
-}
-
-header h2 {
+  }
+  
+  header h2 {
     font-weight: 300;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     margin-top: 0.5rem;
-}
-
-.social-links {
+  }
+  
+  /* 🔗 Social Links */
+  .social-links {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     margin-top: 1.5rem;
     flex-wrap: wrap;
-}
-
-.social-btn {
+  }
+  
+  .social-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -72,36 +103,37 @@ header h2 {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-}
-
-.social-btn i {
+  }
+  
+  .social-btn i {
     font-size: 1.2rem;
-}
-
-.social-btn:hover {
+  }
+  
+  .social-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.instagram {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .instagram {
     background: linear-gradient(45deg, #405DE6, #833AB4, #C13584, #E1306C, #FD1D1D);
-}
-
-.email {
+  }
+  
+  .email {
     background: linear-gradient(45deg, #D44638, #B23121);
-}
-
-.intro {
+  }
+  
+  /* 📄 Intro Section */
+  .intro {
     background-color: rgba(30, 30, 30, 0.9);
     padding: 2.5rem;
     margin: 3rem auto;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border-top: 3px solid var(--spider-red);
     position: relative;
-}
-
-.intro::before {
+  }
+  
+  .intro::before {
     content: "";
     position: absolute;
     top: 0;
@@ -109,37 +141,38 @@ header h2 {
     right: 0;
     height: 3px;
     background: linear-gradient(90deg, transparent, var(--spider-red), transparent);
-}
-
-.contact {
+  }
+  
+  /* 📬 Contact */
+  .contact {
     text-align: center;
     padding: 3rem 0;
     margin-top: 2rem;
-}
-
-.contact h3 {
+  }
+  
+  .contact h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--spider-light);
-}
-
-.contact p {
+  }
+  
+  .contact p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-}
-
-.contact strong {
+  }
+  
+  .contact strong {
     color: var(--spider-accent);
-}
-
-.contact-buttons {
+  }
+  
+  .contact-buttons {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
-}
-
-.btn {
+  }
+  
+  .btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -148,71 +181,93 @@ header h2 {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-}
-
-.contact-btn {
+  }
+  
+  .contact-btn {
     background: var(--spider-red);
     color: white;
-}
-
-.instagram-btn {
+  }
+  
+  .instagram-btn {
     background: linear-gradient(45deg, #405DE6, #E1306C);
     color: white;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-footer {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 🔻 Footer */
+  footer {
     text-align: center;
     padding: 2rem 0;
     background-color: rgba(15, 15, 15, 0.9);
     border-top: 1px solid rgba(214, 45, 32, 0.3);
     margin-top: 2rem;
-}
-
-/* Web-like elements */
-.web-line {
+  }
+  
+  /* 🕸️ Spider Web Lines */
+  .web-line {
     position: absolute;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     animation: web-pulse 3s infinite ease-in-out;
-}
-
-.web-line.vertical {
+  }
+  
+  .web-line.vertical {
     width: 1px;
     height: 100%;
-}
-
-.web-line.horizontal {
+  }
+  
+  .web-line.horizontal {
     height: 1px;
     width: 100%;
-}
-
-/* Animation for subtle web effect */
-@keyframes web-pulse {
+  }
+  
+  @keyframes web-pulse {
     0% { opacity: 0.1; }
     50% { opacity: 0.3; }
     100% { opacity: 0.1; }
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
+  }
+  
+  /* ✨ Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 2.5s ease-out forwards;
+  }
+  
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.7s; }
+  .delay-3 { animation-delay: 1.1s; }
+  .delay-4 { animation-delay: 1.5s; }
+  
+  /* 📱 Responsive Styles */
+  @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
-    
+  
     header h2 {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
-    
+  
     .intro {
-        padding: 1.5rem;
+      padding: 1.5rem;
     }
-    
+  
     .contact-buttons {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-}
+  }

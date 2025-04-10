@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik | Full-Stack Developer & Digital Creator</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="spiderman.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritik | Full-Stack Developer & Digital Creator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="spiderman.css" />
 </head>
 <body>
-    <header>
-        <div class="web-line vertical" style="left: 20%;"></div>
-        <div class="web-line vertical" style="left: 50%;"></div>
-        <div class="web-line vertical" style="left: 80%;"></div>
-        <div class="web-line horizontal" style="top: 30%;"></div>
-        <div class="web-line horizontal" style="top: 60%;"></div>
-        
-        <div class="container">
-            <h1>I'm Ritik</h1>
-            <h2>A Versatile Digital Creator</h2>
-            <div class="social-links">
-                <a href="https://www.instagram.com/tvssed.ritik/" target="_blank" class="social-btn instagram">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-                <a href="mailto:editzritik42@gmail.com" class="social-btn email">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-            </div>
-        </div>
-    </header>
+  <!-- 🕸️ Image-based Spider-Man -->
+  <div class="spidey-swing">
+    <img src="spiderman.png" alt="Spider-Man swinging" />
+  </div>
 
-    <main class="container">
-        <section class="intro">
-            <p>I'm a passionate full-stack developer and digital creator with expertise in multiple domains including web development, video editing, photo editing, and database management. My journey in technology has been driven by curiosity and a desire to create impactful digital experiences.</p>
+  <header class="fade-in delay-1">
+    <div class="web-line vertical" style="left: 20%;"></div>
+    <div class="web-line vertical" style="left: 50%;"></div>
+    <div class="web-line vertical" style="left: 80%;"></div>
+    <div class="web-line horizontal" style="top: 30%;"></div>
+    <div class="web-line horizontal" style="top: 60%;"></div>
 
-            <p>Currently, I'm expanding my skillset by diving into game development, combining my technical knowledge with creative storytelling to build immersive experiences.</p>
+    <div class="container">
+      <h1>I'm Ritik</h1>
+      <h2>A Versatile Digital Creator</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/tvssed.ritik/" target="_blank" class="social-btn instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="mailto:editzritik42@gmail.com" class="social-btn email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </div>
+    </div>
+  </header>
 
-            <p>My approach combines technical precision with creative flair, ensuring that every project I undertake is not only functional but also visually compelling and user-friendly.</p>
-        </section>
+  <main class="container">
+    <section class="intro fade-in delay-2">
+      <p>I'm a passionate full-stack developer and digital creator with expertise in multiple domains including web development, video editing, photo editing, and database management. My journey in technology has been driven by curiosity and a desire to create impactful digital experiences.</p>
 
-        <section class="contact">
-            <h3>Get In Touch</h3>
-            <p>Based in <strong>India</strong>, I'm available for freelance projects and collaborations.</p>
-            <div class="contact-buttons">
-                <a href="mailto:editzritik42@gmail.com" class="btn contact-btn">
-                    <i class="fas fa-paper-plane"></i> Contact Me
-                </a>
-                <a href="https://www.instagram.com/tvssed.ritik/" target="_blank" class="btn instagram-btn">
-                    <i class="fab fa-instagram"></i> DM on Instagram
-                </a>
-            </div>
-        </section>
-    </main>
+      <p>Currently, I'm expanding my skillset by diving into game development, combining my technical knowledge with creative storytelling to build immersive experiences.</p>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Ritik | All Rights Reserved</p>
-        </div>
-    </footer>
+      <p>My approach combines technical precision with creative flair, ensuring that every project I undertake is not only functional but also visually compelling and user-friendly.</p>
+    </section>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Create dynamic web lines
-        document.addEventListener('DOMContentLoaded', function() {
-            const header = document.querySelector('header');
-            for (let i = 0; i < 5; i++) {
-                const line = document.createElement('div');
-                line.className = 'web-line';
-                line.style.left = Math.random() * 100 + '%';
-                line.style.top = Math.random() * 100 + '%';
-                line.style.width = Math.random() * 100 + '%';
-                line.style.opacity = Math.random() * 0.2;
-                header.appendChild(line);
-            }
-        });
-    </script>
+    <section class="contact fade-in delay-3">
+      <h3>Get In Touch</h3>
+      <p>Based in <strong>India</strong>, I'm available for freelance projects and collaborations.</p>
+      <div class="contact-buttons">
+        <a href="mailto:editzritik42@gmail.com" class="btn contact-btn">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+        <a href="https://www.instagram.com/tvssed.ritik/" target="_blank" class="btn instagram-btn">
+          <i class="fab fa-instagram"></i> DM on Instagram
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fade-in delay-4">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ritik | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const header = document.querySelector('header');
+      for (let i = 0; i < 5; i++) {
+        const line = document.createElement('div');
+        line.className = 'web-line';
+        line.style.left = Math.random() * 100 + '%';
+        line.style.top = Math.random() * 100 + '%';
+        line.style.width = Math.random() * 100 + '%';
+        line.style.opacity = Math.random() * 0.2;
+        header.appendChild(line);
+      }
+    });
+  </script>
 </body>
 </html>

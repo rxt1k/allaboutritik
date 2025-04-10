@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Ritik</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="spiderman.css" />
+</head>
+<body>
+  <header class="fade-in delay-1">
+    <div class="container">
+      <h1>My Projects</h1>
+      <p class="fade-in delay-2">Explore categories of my digital creations</p>
+    </div>
+  </header>
+
+  <main class="container fade-in delay-3">
+    <!-- 💻 Web Development Projects -->
+    <section class="project-category">
+      <h2><i class="fas fa-code"></i> Web Development</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Zoro Store</h3>
+          <p>A demo e-commerce site with product display, cart system, and responsive layout.</p>
+          <a href="https://rxt1k.github.io/zorostore/" target="_blank">View Project</a>
+        </div>
+
+        <!-- Add more website boxes below -->
+      </div>
+    </section>
+
+    <!-- 🎬 Video Editing Projects -->
+    <section class="project-category">
+      <h2><i class="fas fa-video"></i> Video Editing</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Cinematic Edit Reel</h3>
+          <p>A showcase of short cinematic edits using After Effects and Premiere Pro.</p>
+          <a href="#" target="_blank">Watch Reel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🖼️ Photo Editing Projects -->
+    <section class="project-category">
+      <h2><i class="fas fa-image"></i> Photo Editing</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Before & After Transformations</h3>
+          <p>Creative edits using Lightroom and Photoshop for portraits and products.</p>
+          <a href="#" target="_blank">View Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🕹️ Game Dev Projects -->
+    <section class="project-category">
+      <h2><i class="fas fa-gamepad"></i> Game Development</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>World of Astras (Roblox)</h3>
+          <p>A fantasy world featuring elemental astras, special powers, and terrain-based maps.</p>
+          <a href="#" target="_blank">Play Game</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fade-in delay-4">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ritik | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
